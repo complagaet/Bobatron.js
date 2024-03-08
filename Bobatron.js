@@ -47,7 +47,7 @@ let bobatron = {
 				if (o != "") { style_o.push(o) }
 			}
 			style = style_o.join(";")
-			if (style_o.length != 0) { style += "; " }
+			if (style_o.length !== 0) { style += "; " }
 		} 
 		else {
 			style = ""
