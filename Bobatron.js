@@ -44,7 +44,7 @@ let bobatron = {
 			}
 			let style_o = []
 			for (let o of style) {
-				if (o != "") { style_o.push(o) }
+				if (o !== "") { style_o.push(o) }
 			}
 			style = style_o.join(";")
 			if (style_o.length !== 0) { style += "; " }
