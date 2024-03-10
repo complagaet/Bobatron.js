@@ -6,17 +6,22 @@
     --green: #6bda00;
     --shadow: #0000005a;
     --unactive: #ccc;
+    --highlight: #e5e5e5;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    display: flex;
+    justify-content: center;
+}
 body {
     width: 100%;
     height: fit-content;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
     display: flex;
     gap: 20px;
     background-color: var(--body);
@@ -52,6 +57,8 @@ h2 {
     align-items: center;
     justify-content: center;
     position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
     top: 20px;
     gap: 15px;
     height: 65px;
@@ -66,16 +73,23 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 100%;
-    max-width: 500px;
+    width: 450px;
+    min-width: 0;
+    flex-grow: 1;
     min-height: 500px;
     padding: 25px;
     background-color: var(--main-bg-color);
 }
+.highlight {
+    width: 100%;
+    background-color: var(--highlight);
+    font-size: inherit;
+    padding: 10px;
+}
 .in_text_highlight {
     display: inline;
     font-family: "Inter", sans-serif;
-    background-color: var(--unactive);
+    background-color: var(--highlight);
     font-size: inherit;
     padding: 3px;
 }

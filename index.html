@@ -22,8 +22,31 @@
                 <div class="bobatron_icon"></div>
             </div>
             <p style="width: 100%">This library is brilliant. It rounds the edges of practically any HTML element just like Apple does.</p>
-            <p style="width: 100%">To target a specific element, add the class <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron</span> to it.</p>
-            <p style="width: 100%">To run the script, execute <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron.scanner()</span>.</p>
+            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%">
+                <p>To install Bobatron into your project, simply include the script by specifying the file path.</p>
+                <div class="highlight bobatron" Bt-CM="0.5">
+                    <div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>script</b></font> <font color="#808080">type</font><font color="black">=</font><font color="blue">"text/javascript"</font> <font color="#808080">src</font><font color="black">=</font><font color="blue">"Bobatron.js"</font><font color="black">&gt;&lt;/</font><font color="#006699"><b>script</b></font><font color="black">&gt;</font><br /></font></code></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%">
+                <p style="width: 100%">To target a specific element, add the class <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron</span> to it.</p>
+                <div class="highlight bobatron" Bt-CM="0.5">
+                    <div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%">
+                <p style="width: 100%">To run the script, execute <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron.scanner()</span>.</p>
+                <div class="highlight bobatron" Bt-CM="0.5">
+                    <div><code><font size="2" face="Courier New"><font color="black">window.addEventListener(</font><font color="blue">"load"</font><font color="black">, () =&gt; {</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">bobatron.scanner()</font><br /><font color="black">})</font><br /><font color="black">window.addEventListener(</font><font color="blue">"resize"</font><font color="black">, () =&gt; {</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">bobatron.scanner()</font><br /><font color="black">})</font><br /></font></code></div>
+                </div>
+                <p style="width: 100%">Usually, <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron.scanner()</span> needs to be called immediately after the page loads, as well as every time the page size is updated.</p>
+            </div>
+        </div>
+        <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
+            <div class="bobatron_logo_full"></div>
+        </div>
+        <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
+            <div class="bobatron_logo_full"></div>
         </div>
         <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
             <div class="bobatron_logo_full"></div>
