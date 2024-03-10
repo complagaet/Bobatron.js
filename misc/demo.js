@@ -26,7 +26,7 @@ let main = {
             let cm = o[i].getAttribute("Bt-CM")
             if (cm != null) { cm = Number(cm) }
             else { cm = 1 }
-            cm *= 26
+            cm *= 29
             try {
                 if (o[i].getAttribute("Bt-Color")) {
                     o[i].style.backgroundColor = `${o[i].getAttribute("Bt-Color")}`

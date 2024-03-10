@@ -87,6 +87,7 @@ h2 {
 }
 .highlight {
     width: 100%;
+    border-radius: 13px;
     background-color: var(--highlight);
     font-size: inherit;
     padding: 10px;
@@ -97,6 +98,7 @@ h2 {
     background-color: var(--highlight);
     font-size: inherit;
     padding: 3px;
+    border-radius: 6px;
 }
 .monospace {
     font-family: monospace;
