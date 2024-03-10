@@ -64,6 +64,7 @@ let bobatron = {
 			if (cm != null) { cm = Number(cm) }
 			else { cm = 1 }
 			try {
+				o[i].style.borderRadius = ""
 				if (o[i].getAttribute("Bt-Color")) {
 					o[i].style.backgroundColor = ""
 					bobatron.toCSSbackground(bobatron.moveXY(o[i].offsetWidth, o[i].offsetHeight, cm), o[i].getAttribute("Bt-Color"), o[i])
