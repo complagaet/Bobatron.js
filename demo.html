@@ -1,6 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <title>Bobatron</title>
+        <link rel="icon" type="image/png" href="misc/BT.png" />
+        <link href="misc/main.css" rel="stylesheet" />
+        <meta charset="UTF-8" />
+        <script type="text/javascript" src="misc/demo.js"></script>
+        <script type="text/javascript" src="Bobatron.js"></script>
     </head>
+    <body>
+        <div class="bobatron_floating_switch_wrapper bobatron" Bt-Color="#f4f4f4" Bt-CM="0.85">
+            <div class="bobatron_logo"></div>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="content_body bobatron" Bt-CM="1.7">
+            <div style="display: flex; width: 100%; justify-content: space-between; align-items: center">
+                <h2 style="margin-top: -8px">This is Bobatron!</h2>
+                <div class="bobatron_icon"></div>
+            </div>
+            <p style="width: 100%">This library is brilliant. It rounds the edges of practically any HTML element just like Apple does.</p>
+            <p style="width: 100%">To target a specific element, add the class <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron</span> to it.</p>
+            <p style="width: 100%">To run the script, execute <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron.scanner()</span>.</p>
+        </div>
+        <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
+            <div class="bobatron_logo_full"></div>
+        </div>
+    </body>
 </html>
