@@ -68,11 +68,11 @@ let main = {
             cm = (slider.value * 3 / 100 + 0.01).toFixed(2);
 
         test.setAttribute("Bt-CM", `${cm}`)
-        examples.cm = `<div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font> <font color="#808080">Bt-CM</font><font color="black">=</font><font color="blue">${cm}</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>`
+        examples.cm = `<div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font> <font color="#808080">Bt-CM</font><font color="black">=</font><font color="blue">"${cm}"</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>`
         slider.oninput = () => {
             cm = (slider.value * 3 / 100 + 0.01).toFixed(2)
             test.setAttribute("Bt-CM", `${cm}`)
-            examples.cm = `<div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font> <font color="#808080">Bt-CM</font><font color="black">=</font><font color="blue">${cm}</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>`
+            examples.cm = `<div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font> <font color="#808080">Bt-CM</font><font color="black">=</font><font color="blue">"${cm}"</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>`
             main.examplesShow()
             main.conditionalBobatronScanner()
         }
