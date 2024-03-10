@@ -38,21 +38,25 @@ let bobatron = {
 			<path d="${path_ViewBox[0]}" fill=""/>
 		</svg>`, style = obj.getAttribute("style")
 		if (style) {
-			style = obj.getAttribute("style").split(";")
-			for(let i = 0; i < style.length; i++) {
-				if (style[i].includes("mask-")) { style[i] = "" }
-			}
-			let style_o = []
-			for (let o of style) {
-				if (o !== "") { style_o.push(o) }
-			}
-			style = style_o.join(";")
-			if (style_o.length !== 0) { style += "; " }
+			style = bobatron.clearBobatronMasks(style);
 		} 
 		else {
 			style = ""
 		}
 		obj.setAttribute("style", `${style}-webkit-mask-image: url("data:image/svg+xml,${encodeURIComponent(css)}"); -webkit-mask-repeat: no-repeat; mask-image: url("data:image/svg+xml,${encodeURIComponent(css)}"); mask-repeat: no-repeat`)
+	},
+	clearBobatronMasks: (style) => {
+		style = style.split(";")
+		for (let i = 0; i < style.length; i++) {
+			if (style[i].includes("mask-")) { style[i] = "" }
+		}
+		let style_o = []
+		for (let o of style) {
+			if (o !== "") { style_o.push(o) }
+		}
+		style = style_o.join(";")
+		if (style_o.length !== 0) { style += "; " }
+		return style
 	},
 	scanner: () => {
 		for (let i = 0, o = document.getElementsByClassName("bobatron"); i < o.length; i++) {
@@ -60,8 +64,21 @@ let bobatron = {
 			if (cm != null) { cm = Number(cm) }
 			else { cm = 1 }
 			try {
-				if (o[i].getAttribute("Bt-Color")) { bobatron.toCSSbackground(bobatron.moveXY(o[i].offsetWidth, o[i].offsetHeight, cm), o[i].getAttribute("Bt-Color"), o[i]) }
+				if (o[i].getAttribute("Bt-Color")) {
+					o[i].style.backgroundColor = ""
+					bobatron.toCSSbackground(bobatron.moveXY(o[i].offsetWidth, o[i].offsetHeight, cm), o[i].getAttribute("Bt-Color"), o[i])
+				}
 				else { bobatron.toCSSmask(bobatron.moveXY(o[i].offsetWidth, o[i].offsetHeight, cm), o[i]) }
+				//console.log(o[i].offsetWidth, o[i].offsetHeight, o[i].getAttribute("Bt-Color"), cm)
+			}
+			catch(e) { console.log(e) }
+		}
+	},
+	clearAll: () => {
+		for (let i = 0, o = document.getElementsByClassName("bobatron"); i < o.length; i++) {
+			try {
+				if (o[i].getAttribute("Bt-Color")) { o[i].style.backgroundImage = ""; }
+				else {o[i].style = bobatron.clearBobatronMasks(o[i].getAttribute("style")) }
 				//console.log(o[i].offsetWidth, o[i].offsetHeight, o[i].getAttribute("Bt-Color"), cm)
 			}
 			catch(e) { console.log(e) }

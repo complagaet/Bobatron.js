@@ -52,6 +52,11 @@ h2 {
     background-image: url("B.svg");
     background-repeat: no-repeat;
 }
+.corner_icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--unactive);
+}
 .bobatron_floating_switch_wrapper {
     display: flex;
     align-items: center;
@@ -93,9 +98,42 @@ h2 {
     font-size: inherit;
     padding: 3px;
 }
-
 .monospace {
     font-family: monospace;
+}
+.bobatron_cm_test {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body);
+}
+
+.slider_l {
+    appearance: none;
+    background-color: #FF7E2A;
+    outline: none;
+    width: 254px;
+    height: 17px;
+    border-radius: 9px;
+}
+.slider_l::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.slider_l::-moz-range-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 0;
 }
 
 /* SWITCHER */

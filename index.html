@@ -13,7 +13,7 @@
         <div class="bobatron_floating_switch_wrapper bobatron" Bt-Color="#f4f4f4" Bt-CM="0.85">
             <div class="bobatron_logo"></div>
             <label class="switch">
-                <input type="checkbox" checked>
+                <input type="checkbox" checked id="btSwitcher">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -43,11 +43,25 @@
                 <p style="width: 100%">Usually, <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">bobatron.scanner()</span> needs to be called immediately after the page loads, as well as every time the page size is updated.</p>
             </div>
         </div>
-        <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
-            <div class="bobatron_logo_full"></div>
-        </div>
-        <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
-            <div class="bobatron_logo_full"></div>
+        <div class="content_body bobatron" Bt-CM="1.7">
+            <div style="display: flex; width: 100%; justify-content: space-between; align-items: center">
+                <h2 style="margin-top: -8px">Adjust corners</h2>
+                <div class="corner_icon bobatron" Bt-CM="0.5"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%">
+                <p>To adjust the rounding radius in Bobatron, you can use the <span class="in_text_highlight bobatron monospace" Bt-CM="0.25">Bt-CM</span> attribute, which allows you to control the rounding radius.</p>
+                <div class="highlight bobatron" Bt-CM="0.5">
+                    <div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font> <font color="#808080">Bt-CM</font><font color="black">=</font><font color="blue">"1"</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%; height: 100%">
+                <p>Try it here!</p>
+                <div id="test_cm" class="bobatron_cm_test bobatron" Bt-CM="1">
+                    <label>
+                        <input type="range" min="0" max="100" value="30" class="slider_l" id="slider_cm">
+                    </label>
+                </div>
+            </div>
         </div>
         <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
             <div class="bobatron_logo_full"></div>
