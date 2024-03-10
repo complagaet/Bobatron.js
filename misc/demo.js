@@ -6,16 +6,33 @@ let glob= {
     BT_ENABLED: true
 }
 
+let examples = {
+    install: `<div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>script</b></font> <font color="#808080">type</font><font color="black">=</font><font color="blue">"text/javascript"</font> <font color="#808080">src</font><font color="black">=</font><font color="blue">"Bobatron.js"</font><font color="black">&gt;&lt;/</font><font color="#006699"><b>script</b></font><font color="black">&gt;</font><br /></font></code></div>`,
+    html: `<div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>`,
+    launch: `<div><code><font size="2" face="Courier New"><font color="black">window.addEventListener(</font><font color="blue">"load"</font><font color="black">, () =&gt; {</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">bobatron.scanner()</font><br /><font color="black">})</font><br /><font color="black">window.addEventListener(</font><font color="blue">"resize"</font><font color="black">, () =&gt; {</font><br />&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">bobatron.scanner()</font><br /><font color="black">})</font><br /></font></code></div>`,
+    cm: `<div><code><font size="2" face="Courier New"><font color="black">&lt;</font><font color="#006699"><b>div</b></font> <font color="#808080">class</font><font color="black">=</font><font color="blue">"bobatron"</font> <font color="#808080">Bt-CM</font><font color="black">=</font><font color="blue">"1"</font><font color="black">&gt;</font><br /><font color="black">...</font><br /><font color="black">&lt;/</font><font color="#006699"><b>div</b></font><font color="black">&gt;</font><br /></font></code></div>`
+}
+
 let main = {
     init() {
         main.btSwitcher()
         main.cmDemo()
+        main.examplesShow()
 
         main.conditionalBobatronScanner()
 
         window.addEventListener("resize", () => {
             main.conditionalBobatronScanner()
         })
+    },
+    examplesShow() {
+        for (let [key, value] of Object.entries(examples)) {
+            try {
+                document.getElementById(`example_${key}`).innerHTML = value;
+            } catch (e) {
+                console.log(e);
+            }
+        }
     },
     conditionalBobatronScanner() {
         glob.BT_ENABLED ? bobatron.scanner() : main.bobatronSubstitution();

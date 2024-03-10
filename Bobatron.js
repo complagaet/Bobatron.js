@@ -80,7 +80,6 @@ let bobatron = {
 			try {
 				if (o[i].getAttribute("Bt-Color")) { o[i].style.backgroundImage = ""; }
 				else {o[i].style = bobatron.clearBobatronMasks(o[i].getAttribute("style")) }
-				//console.log(o[i].offsetWidth, o[i].offsetHeight, o[i].getAttribute("Bt-Color"), cm)
 			}
 			catch(e) { console.log(e) }
 		}
