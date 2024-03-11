@@ -7,6 +7,7 @@
     --shadow: #0000005a;
     --unactive: #ccc;
     --highlight: #e5e5e5;
+    --download: #8fdf43;
 }
 * {
     margin: 0;
@@ -102,6 +103,19 @@ h2 {
 }
 .monospace {
     font-family: monospace;
+}
+.download {
+    display: flex;
+    border: 0;
+    background-color: var(--download);
+    justify-content: center;
+}
+.clickable {
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.clickable:hover {
+    transform: scale(0.95);
 }
 .bobatron_cm_test {
     width: 100%;
