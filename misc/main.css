@@ -109,6 +109,7 @@ h2 {
     border: 0;
     background-color: var(--download);
     justify-content: center;
+    color: #000000;
 }
 .clickable {
     transition-duration: 0.3s;
