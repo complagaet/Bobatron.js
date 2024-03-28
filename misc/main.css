@@ -8,6 +8,7 @@
     --unactive: #ccc;
     --highlight: #e5e5e5;
     --download: #8fdf43;
+    --example: #8d99ff;
 }
 * {
     margin: 0;
@@ -26,7 +27,7 @@ body {
     display: flex;
     gap: 20px;
     background-color: var(--body);
-    padding: calc(65px + 20px * 2) 20px 20px 20px;
+    padding: calc(65px + 20px * 2) 20px 15px 20px;
 }
 h1, h2, h3, h4, h5, h6, p {
     font-family: "Inter", sans-serif;
@@ -56,7 +57,26 @@ h2 {
 .corner_icon {
     width: 40px;
     height: 40px;
-    background-color: var(--unactive);
+    background-image: url("corner.svg");
+    background-repeat: no-repeat;
+}
+.mask_icon {
+    width: 40px;
+    height: 40px;
+    background-image: url("mask.svg");
+    background-repeat: no-repeat;
+}
+.btn_15 {
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+.github {
+    width: 45px;
+    height: 45px;
+    background-image: url("github-mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .bobatron_floating_switch_wrapper {
     display: flex;
@@ -204,4 +224,46 @@ input:checked + .slider:before {
 }
 .slider.round:before {
     border-radius: 50%;
+}
+.red_pyramid {
+    background-color: #ffdbdb;
+    padding: 35px;
+    height: 100%;
+    width: 100%;
+}
+.mask_demo {
+    background-image: url("floppa.webp");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+.bobatron_bg_test {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+
+.footerHeader {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+.Lukoyanov {
+    height: 65px;
+    width: 264px;
+    mask-image: url("Lukoyanov.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url("Lukoyanov.svg");
+    -webkit-mask-repeat: no-repeat;
+    background-color: #584d6f;
+    background-repeat: no-repeat;
 }

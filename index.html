@@ -17,6 +17,12 @@
                 <span class="slider round"></span>
             </label>
         </div>
+        <div class="footerHeader" style="height: fit-content; justify-content: flex-start">
+            <div class="clickable btn_15" onclick="window.location.href = 'https://github.com/complagaet/Bobatron.js'">
+                <div class="github"></div>
+                <h2>GitHub</h2>
+            </div>
+        </div>
         <div class="content_body bobatron" Bt-CM="1.7">
             <div style="display: flex; width: 100%; justify-content: space-between; align-items: center">
                 <h2 style="margin-top: -8px">This is Bobatron!</h2>
@@ -43,7 +49,7 @@
         <div class="content_body bobatron" Bt-CM="1.7">
             <div style="display: flex; width: 100%; justify-content: space-between; align-items: center">
                 <h2 style="margin-top: -8px">Adjust corners</h2>
-                <div class="corner_icon bobatron" Bt-CM="0.5"></div>
+                <div class="corner_icon"></div>
             </div>
             <div style="display: flex; flex-direction: column; gap: 5px; width: 100%">
                 <p>To adjust the rounding radius in Bobatron, you can use the <span class="in_text_highlight monospace">Bt-CM</span> attribute, which allows you to control the rounding radius.</p>
@@ -58,8 +64,38 @@
                 </div>
             </div>
         </div>
+        <div class="content_body bobatron" Bt-CM="1.7">
+            <div style="display: flex; width: 100%; justify-content: space-between; align-items: center">
+                <h2 style="margin-top: -8px">Mask / BG Modes</h2>
+                <div class="mask_icon"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%">
+                <p style="width: 100%">By default, Bobatron uses the Mask Mode.</p>
+                <div class="mask_demo bobatron" Bt-CM="1.3"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%">
+                <p style="width: 100%">By adding <span class="in_text_highlight monospace">Bt-Color</span> property with required color, Bobatron automatically enables Background Mode for specified element.</p>
+                <div class="highlight" id="example_color"></div>
+                <div class="bobatron_bg_test" style="height: 200px">
+                    <div class="bobatron_bg_test bobatron" Bt-Color="#FF7E2A" Bt-CM="1" style="filter: drop-shadow(0px 0px 20px var(--shadow))"></div>
+                </div>
+                <p style="width: 100%">Background Mode makes possible to use special filters like <span class="in_text_highlight monospace" style="text-wrap: avoid">drop-shadow</span>.</p>
+            </div>
+        </div>
+        <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center; padding: 35px">
+            <div class="red_pyramid bobatron" Bt-CM="1.3" style="">
+                <div class="red_pyramid bobatron" Bt-CM="1" style="background-color: #ffa8a8">
+                    <div class="red_pyramid bobatron" Bt-CM="0.7" style="background-color: #ff8888">
+                        <div class="red_pyramid bobatron" Bt-CM="0.5" style="background-color: #ef6060; padding: 0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="content_body bobatron" Bt-CM="1.7" style="justify-content: center">
             <div class="bobatron_logo_full"></div>
+        </div>
+        <div class="footerHeader">
+            <div class="Lukoyanov clickable" onclick="window.location.href = 'https://github.com/complagaet'"></div>
         </div>
     </body>
 </html>
